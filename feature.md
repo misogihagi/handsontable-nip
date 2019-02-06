@@ -1,38 +1,27 @@
-Features
+Handsontableできること
 --------
 
-Handsontable includes many features and plugins. By "feature" we mean a functionality that provides you with a
-specific benefit. It can be literally anything, even the smallest thing like the navigation or the data binding
-capabilities. A plugin, on the other hand, is intended to be perceived as an internal or external "container" that
-contains one or more features.
+handsontableは多くの機能とプラグインを含みます。「機能」とは、具体的に利便を提供する機能性を意味します。
+それは文字通り何でも、ナビゲーションやデータバインディングのような最小のものでさえ可能です。
+一方、プラグインは、内部または外部の「コンテナ」として認識されることを目的としていて、1つ以上の機能が含まれています。
 
-Below you will find the most complete list of features for either Handsontable Pro and Community Edition:
+以下に、Handsontable ProおよびCommunity Editionの機能の最も完全なリストを示します:
 
-### Pro features
+### Proでできること
 
 Name                                                                                         | Description                                                                                      
 -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------
 [Binding rows with headers](https://handsontable.com/docs/6.2.2/demo-bind-rows-headers.html) |       Bind rows with headers to lock the row number and always display one beside the other.
-
 [Collapsing columns](https://handsontable.com/docs/6.2.2/demo-collapsing-columns.html)       |       Expand and collapse columns to better fit the content.
-
 [Column summary](https://handsontable.com/docs/6.2.2/demo-summary-calculations.html)         |       Make pre-defined calculations and display the results in Handsontable.
-
 [Dropdown menu](https://handsontable.com/docs/6.2.2/demo-dropdown-menu.html)                 |       Add a menu to the heading to enable additional operations for the columns.
-
 [Export to file](https://handsontable.com/docs/6.2.2/demo-export-file.html)                  |       Export data to a flat file like CSV or a string.
-
 [Filtering](https://handsontable.com/docs/6.2.2/demo-filtering.html)                         |       Display rows that meet your criteria and hide the rest.
-
 [Header tooltips](https://handsontable.com/docs/6.2.2/demo-header-tooltips.html)             |       Display the header label in a tooltip.
-
 [Hiding columns](https://handsontable.com/docs/6.2.2/demo-hiding-columns.html)               |       Hide specific columns and show the rest.
-
 [Hiding rows](https://handsontable.com/docs/6.2.2/demo-hiding-rows.html)                     |       Hide specific rows and show the rest.
-
 [Multiple column sorting](https://handsontable.com/docs/6.2.2/demo-multicolumn-sorting.html) | Sort data in ascending or descending order throughout multiple columns.                          
 [Nested headers](https://handsontable.com/docs/6.2.2/demo-nested-headers.html)               |       Create a nested, hierarchical structure of headers to get your data into groups.
-
 [Trimming rows](https://handsontable.com/docs/6.2.2/demo-trimming-rows.html)                 |       Exclude specific rows from the rendering process so they won't be displayed.
 
 

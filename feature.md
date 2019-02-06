@@ -1,28 +1,29 @@
-Handsontableできること
+Handsontableでできること
 --------
 
-handsontableは多くの機能とプラグインを含みます。「機能」とは、具体的に利便を提供する機能性を意味します。
+handsontableは多くの機能とプラグインを含みます。「機能」とは、特定の役割を提供する機能性を意味します。
 それは文字通り何でも、ナビゲーションやデータバインディングのような最小のものでさえ可能です。
 一方、プラグインは、内部または外部の「コンテナ」として認識されることを目的としていて、1つ以上の機能が含まれています。
 
 以下に、Handsontable ProおよびCommunity Editionの機能の最も完全なリストを示します:
 
-### Proでできること
+### Proの特徴
 
-Name                                                                                         | Description                                                                                      
+名称                                                                                         | 説明                                                                                      
 -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------
-[Binding rows with headers](https://handsontable.com/docs/6.2.2/demo-bind-rows-headers.html) |       Bind rows with headers to lock the row number and always display one beside the other.
-[Collapsing columns](https://handsontable.com/docs/6.2.2/demo-collapsing-columns.html)       |       Expand and collapse columns to better fit the content.
-[Column summary](https://handsontable.com/docs/6.2.2/demo-summary-calculations.html)         |       Make pre-defined calculations and display the results in Handsontable.
-[Dropdown menu](https://handsontable.com/docs/6.2.2/demo-dropdown-menu.html)                 |       Add a menu to the heading to enable additional operations for the columns.
-[Export to file](https://handsontable.com/docs/6.2.2/demo-export-file.html)                  |       Export data to a flat file like CSV or a string.
-[Filtering](https://handsontable.com/docs/6.2.2/demo-filtering.html)                         |       Display rows that meet your criteria and hide the rest.
-[Header tooltips](https://handsontable.com/docs/6.2.2/demo-header-tooltips.html)             |       Display the header label in a tooltip.
-[Hiding columns](https://handsontable.com/docs/6.2.2/demo-hiding-columns.html)               |       Hide specific columns and show the rest.
-[Hiding rows](https://handsontable.com/docs/6.2.2/demo-hiding-rows.html)                     |       Hide specific rows and show the rest.
-[Multiple column sorting](https://handsontable.com/docs/6.2.2/demo-multicolumn-sorting.html) | Sort data in ascending or descending order throughout multiple columns.                          
-[Nested headers](https://handsontable.com/docs/6.2.2/demo-nested-headers.html)               |       Create a nested, hierarchical structure of headers to get your data into groups.
-[Trimming rows](https://handsontable.com/docs/6.2.2/demo-trimming-rows.html)                 |       Exclude specific rows from the rendering process so they won't be displayed.
+-------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------
+[Binding rows with headers](https://handsontable.com/docs/6.2.2/demo-bind-rows-headers.html) |       行番号をロックし、常に行をセルの横に表示するために、行をヘッダーでバインドします。
+[Collapsing columns](https://handsontable.com/docs/6.2.2/demo-collapsing-columns.html)       |       内容に合わせて列を展開したり折りたたんだりします。
+[Column summary](https://handsontable.com/docs/6.2.2/demo-summary-calculations.html)         |       定義済みの計算を行い、その結果をHandsontableに表示します。
+[Dropdown menu](https://handsontable.com/docs/6.2.2/demo-dropdown-menu.html)                 |       列に追加の操作を有効にするために、見出しにメニューを追加します。
+[Export to file](https://handsontable.com/docs/6.2.2/demo-export-file.html)                  |       CSVや文字列などのフラットファイルにデータをエクスポートします。
+[Filtering](https://handsontable.com/docs/6.2.2/demo-filtering.html)                         |       条件を満たす行を表示し、残りを隠します。
+[Header tooltips](https://handsontable.com/docs/6.2.2/demo-header-tooltips.html)             |       ツールチップにヘッダーラベルを表示します。
+[Hiding columns](https://handsontable.com/docs/6.2.2/demo-hiding-columns.html)               |       特定の列を非表示にして残りを表示します。
+[Hiding rows](https://handsontable.com/docs/6.2.2/demo-hiding-rows.html)                     |       特定の行を非表示にして残りを表示します。
+[Multiple column sorting](https://handsontable.com/docs/6.2.2/demo-multicolumn-sorting.html) |       複数の列にわたってデータを昇順または降順に並べ替えます。                        
+[Nested headers](https://handsontable.com/docs/6.2.2/demo-nested-headers.html)               |       データをグループにまとめるための、ネストした階層構造のヘッダを作成します。
+[Trimming rows](https://handsontable.com/docs/6.2.2/demo-trimming-rows.html)                 |       特定の行を、表示されないようにレンダリングプロセスから除外します。
 
 
 ### Experimental Pro features (not yet supported)

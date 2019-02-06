@@ -1,0 +1,19 @@
+ブラウザの互換性
+-------------
+   すべてのリリースは最も人気のあるブラウザでテストされています。
+   このバージョン（6.2.2）は以下のブラウザでテストされています:
+
+   Firefox | Chrome | Internet Explorer | Edge | Safari | Opera
+   ------- | ------ | ----------------- | ---- | ------ | -----
+   50+     | 56+    | 9*, 10, 11        | 20+  | 9+     | 26+  
+
+##### **\* Internet Explorer 9 の既知の問題 :**
+
+* 大量のデータを扱うには制限されている
+* いくつかのテストに失敗している
+* コンテキストメニューからオプションを選択すると動作が遅くなることがある
+* ヘッダーがちらつく
+
+
+ [        Help us improve this page
+ ](https://github.com/handsontable/docs/edit/6.2.2/tutorials/compatibility.html)

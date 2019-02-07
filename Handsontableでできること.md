@@ -11,7 +11,6 @@ handsontableは多くの機能とプラグインを含みます。「機能」�
 
 名称                                                                                         | 説明                                                                                      
 -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------
 [Binding rows with headers](https://handsontable.com/docs/6.2.2/demo-bind-rows-headers.html) |       行番号をロックし、常に行をセルの横に表示するために、行をヘッダーでバインドします。
 [Collapsing columns](https://handsontable.com/docs/6.2.2/demo-collapsing-columns.html)       |       内容に合わせて列を展開したり折りたたんだりします。
 [Column summary](https://handsontable.com/docs/6.2.2/demo-summary-calculations.html)         |       定義済みの計算を行い、その結果をHandsontableに表示します。
@@ -72,5 +71,6 @@ handsontableは多くの機能とプラグインを含みます。「機能」�
 [Sorting data](https://handsontable.com/docs/6.2.2/demo-sorting.html)                          | 列全体でデータを昇順または降順に並べ替えます。                                                             
 [Stretching](https://handsontable.com/docs/6.2.2/demo-stretching.html)                         | 親コンテナーの幅まで列を許可します。                                                                       
 
-[    Help us improve this page
-](https://github.com/handsontable/docs/edit/6.2.2/tutorials/features.html)
+このページの改善にご協力ください  
+[日本語に問題がある場合](https://github.com/misogihagi/handsontable-nip/wiki)  
+[Handsontableそのもの](https://github.com/handsontable/docs/edit/6.2.2/tutorials/licensing.html)

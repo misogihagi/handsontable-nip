@@ -37,3 +37,7 @@ Handsontable Community Editionはコアテクノロジーとして無料で公�
 * [StackOverflow](https://stackoverflow.com/questions/tagged/handsontable)で質問する
 * [開発者フォーラム](https://forum.handsontable.com/)に質問する（Pro）
 * [サポートチーム](mailto:support@handsontable.com) に問い合わせる（Pro）
+
+このページの改善にご協力ください  
+[日本語に問題がある場合](https://github.com/misogihagi/handsontable-nip/wiki)  
+[Handsontableそのもの](https://github.com/handsontable/docs/edit/6.2.2/tutorials/licensing.html)

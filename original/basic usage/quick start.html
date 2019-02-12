@@ -1,0 +1,145 @@
+    <div class="static-content">
+
+  <div class="index-list">
+    <p>Follow these steps to install Handsontable:</p>
+    <ol>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-quick-start.html#page-install">Install</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-quick-start.html#page-create">Create</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-quick-start.html#page-bind">Initialize</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-quick-start.html#page-alternative">Alternative installation</a></li>
+    </ol>
+  </div>
+
+  <div class="example-container clearfix" name="install">
+    <h3 id="page-install">Step 1: Install</h3>
+
+    <div class="tabs-alternative">
+      <div class="tabs handsontable-switcher">
+        <div class="tab switch active">
+          <ul>
+            <li id="tab-pro" aria-selected="true" class="active">Install Handsontable Pro</li>
+            <li id="tab-ce" aria-selected="false">Install Community Edition</li>
+          </ul>
+          <div class="tabs-content">
+            <div id="tab-content-pro" aria-hidden="false" class="content active">
+              <p>
+                <a href="https://handsontable.com/pro-download.html">There are many ways</a> to install Handsontable Pro
+                but we suggest using <a href="https://www.npmjs.com/package/handsontable-pro" target="_blank">npm</a>.
+                Just type in the following command:
+              </p>
+              <pre><code class="lang-bash hljs">npm install handsontable-pro</code></pre>
+              <p>After the installation process is finished, embed this code inside your HTML file:</p>
+              <pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"node_modules/handsontable-pro/dist/handsontable.full.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/handsontable-pro/dist/handsontable.full.min.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span>&gt;</span></code></pre>
+              <p>Alternatively, use a CDN:</p>
+              <pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/handsontable-pro@6.2.2/dist/handsontable.full.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/handsontable-pro@6.2.2/dist/handsontable.full.min.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span>&gt;</span></code></pre>
+            </div>
+            <div id="tab-content-ce" aria-hidden="true" class="content">
+              <p>
+                <a href="https://handsontable.com/ce-download.html">There are many ways</a> to install Handsontable CE
+                but we suggest using
+                <a href="https://www.npmjs.com/package/handsontable" target="_blank">npm</a>.
+                Just type in the following command:
+              </p>
+              <pre><code class="lang-bash hljs">npm install handsontable</code></pre>
+              <p>After the installation process is finished, embed this code inside your HTML file:</p>
+              <pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"node_modules/handsontable/dist/handsontable.full.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/handsontable/dist/handsontable.full.min.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span>&gt;</span></code></pre>
+              <p>Alternatively, use a CDN:</p>
+              <pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/handsontable@6.2.2/dist/handsontable.full.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/handsontable@6.2.2/dist/handsontable.full.min.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"screen"</span>&gt;</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example-container clearfix" name="create">
+    <h3 id="page-create">Step 2: Create</h3>
+    <p>
+      Add an empty <code>&lt;div&gt;</code> element that will be turned into a spreadsheet.
+      Let's give this element an "example" ID.
+    </p>
+    <p>
+      <code>&lt;div id="example"&gt;&lt;/div&gt;</code>
+    </p>
+  </div>
+
+  <div class="example-container clearfix" name="bind">
+    <h3 id="page-bind">Step 3: Initialize</h3>
+    <p>In the next step, pass a reference to that <code>&lt;div id="example"&gt;</code> element and fill
+      it with sample data:</p>
+    <pre><code class="lang-js hljs javascript"><span class="hljs-keyword">var</span> data = [
+  [<span class="hljs-string">""</span>, <span class="hljs-string">"Ford"</span>, <span class="hljs-string">"Tesla"</span>, <span class="hljs-string">"Toyota"</span>, <span class="hljs-string">"Honda"</span>],
+  [<span class="hljs-string">"2017"</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>],
+  [<span class="hljs-string">"2018"</span>, <span class="hljs-number">20</span>, <span class="hljs-number">11</span>, <span class="hljs-number">14</span>, <span class="hljs-number">13</span>],
+  [<span class="hljs-string">"2019"</span>, <span class="hljs-number">30</span>, <span class="hljs-number">15</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>]
+];
+
+<span class="hljs-keyword">var</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'example'</span>);
+<span class="hljs-keyword">var</span> hot = <span class="hljs-keyword">new</span> Handsontable(container, {
+  <span class="hljs-attr">data</span>: data,
+  <span class="hljs-attr">rowHeaders</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">colHeaders</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">filters</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">dropdownMenu</span>: <span class="hljs-literal">true</span>
+});</code></pre>
+  </div>
+
+  <div class="example-container clearfix" name="result">
+    <h3 id="page-result">Step 4: The result</h3>
+    <p>That's it, now your Handsontable Pro is up and ready to use:</p>
+
+    <div data-jsfiddle="example">
+      <div id="example" class="hot handsontable htRowHeaders htColumnHeaders"><div class="ht_master handsontable" style="position: relative; overflow: visible;"><div class="wtHolder" style="position: relative; overflow: visible;"><div class="wtHider" style="width: 305px; height: 119px;"><div class="wtSpreader" style="position: relative; top: 0px; left: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"><col style="width: 50px;"><col style="width: 50px;"><col style="width: 50px;"><col style="width: 53px;"><col style="width: 52px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">A</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">B</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">C</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">D</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">E</span></div></th></tr></thead><tbody><tr><th class=""><div class="relative"><span class="rowHeader">1</span></div></th><td class=""></td><td class="">Ford</td><td class="">Tesla</td><td class="">Toyota</td><td class="">Honda</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">2</span></div></th><td class="">2017</td><td class="">10</td><td class="">11</td><td class="">12</td><td class="">13</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">3</span></div></th><td class="">2018</td><td class="">20</td><td class="">11</td><td class="">14</td><td class="">13</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">4</span></div></th><td class="">2019</td><td class="">30</td><td class="">15</td><td class="">12</td><td class="">13</td></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_top handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; height: 30px; transform: translate3d(0px, 0px, 0px);"><div class="wtHolder" style="position: relative; height: 47px;"><div class="wtHider" style="width: 305px;"><div class="wtSpreader" style="position: relative; left: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"><col style="width: 50px;"><col style="width: 50px;"><col style="width: 50px;"><col style="width: 53px;"><col style="width: 52px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">A</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">B</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">C</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">D</span></div></th><th class=""><div class="relative"><button class="changeType"></button><span class="colHeader">E</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_bottom handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup></colgroup><thead><tr></tr></thead><tbody></tbody></table></div></div></div></div><div class="ht_clone_left handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; width: 54px; transform: translate3d(0px, 0px, 0px);"><div class="wtHolder" style="position: relative; width: 71px;"><div class="wtHider" style="height: 119px;"><div class="wtSpreader" style="position: relative; top: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th></tr></thead><tbody><tr><th class=""><div class="relative"><span class="rowHeader">1</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">2</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">3</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">4</span></div></th></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_top_left_corner handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 0px, 0px); height: 30px; width: 54px;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div></div>
+    </div>
+
+    <script data-jsfiddle="example">
+      var data = [
+        ["", "Ford", "Tesla", "Toyota", "Honda"],
+        ["2017", 10, 11, 12, 13],
+        ["2018", 20, 11, 14, 13],
+        ["2019", 30, 15, 12, 13]
+      ];
+
+      var container = document.getElementById('example');
+      var hot = new Handsontable(container, {
+        data: data,
+        rowHeaders: true,
+        colHeaders: true,
+        filters: true,
+        dropdownMenu: true
+      });
+    </script>
+
+    <p>
+      You are probably wondering how to not only bind the data source but also save the changes made
+      in Handsontable Pro? Head to
+      <a href="https://handsontable.com/docs/6.2.2/tutorial-data-binding.html">Binding data</a> page to learn more about it.
+    </p>
+  </div>
+
+  <div class="example-container clearfix" name="alternative">
+    <h3 id="page-alternative">Alternative installation</h3>
+    <p>Find all the available installation options on the
+      <a href="https://handsontable.com/pro-download.html">Download Handsontable Pro</a> page or <a href="https://handsontable.com/ce-download.html">Download Handsontable CE</a> page.
+    </p>
+  </div>
+
+  <div class="example-container clearfix" name="nextsteps">
+    <h3 id="page-next-steps">Next steps</h3>
+    <ul>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-data-sources.html">How to connect the data source?</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-load-and-save.html">How to load and save data?</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/demo-custom-renderers.html">How to create a custom HTML inside a cell or header?</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/demo-data-validation.html">How to validate data?</a></li>
+    </ul>
+  </div>
+  <p class="gap-top-xsmall">
+    <a href="https://github.com/handsontable/docs/edit/6.2.2/tutorials/quick-start.html" class="edit-doc" target="_blank">
+      Help us improve this page
+    </a>
+  </p>
+</div>
+
+  

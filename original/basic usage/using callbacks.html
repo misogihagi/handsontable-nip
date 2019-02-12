@@ -1,0 +1,467 @@
+    <div class="static-content">
+
+  <div class="index-list">
+
+    <ul>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-using-callbacks.html#page-callbacks">Callbacks</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-using-callbacks.html#page-source-definition">Definition for <code>source</code> argument</a></li>
+      <li><a href="https://handsontable.com/docs/6.2.2/tutorial-using-callbacks.html#page-beforeKeyDown"><code>beforeKeyDown</code> use case</a></li>
+    </ul>
+  </div>
+
+  <div class="example-container clearfix" name="callbacks">
+    <h3 id="page-callbacks">Callbacks</h3>
+    <p>This page shows usage of some callbacks available in Handsontable. If you require a new callback to be added,
+      please <a href="https://github.com/handsontable/handsontable/issues/new" target="_blank">open an issue</a>.
+      Note that some callbacks are checked on this page by default.
+    </p>
+
+    <div data-jsfiddle="example1" class="part-left-container callbacks-container clearfix">
+      <div id="example1" class="hot handsontable htColumnHeaders"><div class="ht_master handsontable" style="position: relative; overflow: visible;"><div class="wtHolder" style="position: relative; overflow: visible;"><div class="wtHider" style="width: 349px; height: 165px;"><div class="wtSpreader" style="position: relative; top: 0px; left: 0px;"><table class="htCore"><colgroup><col style="width: 50px;"><col style="width: 50px;"><col style="width: 52px;"><col style="width: 72px;"><col style="width: 50px;"><col style="width: 75px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader">A</span></div></th><th class=""><div class="relative"><span class="colHeader">B</span></div></th><th class=""><div class="relative"><span class="colHeader">C</span></div></th><th class=""><div class="relative"><span class="colHeader">D</span></div></th><th class=""><div class="relative"><span class="colHeader">E</span></div></th><th class=""><div class="relative"><span class="colHeader">F</span></div></th></tr></thead><tbody><tr><td class=""></td><td class="">Tesla</td><td class="">Mazda</td><td class="">Mercedes</td><td class="">Mini</td><td class="">Mitsubishi</td></tr><tr><td class="">2017</td><td class="">0</td><td class="">2941</td><td class="">4303</td><td class="">354</td><td class="">5814</td></tr><tr><td class="">2018</td><td class="">3</td><td class="">2905</td><td class="">2867</td><td class="">412</td><td class="">5284</td></tr><tr><td class="">2019</td><td class="">4</td><td class="">2517</td><td class="">4822</td><td class="">552</td><td class="">6127</td></tr><tr><td class="">2020</td><td class="">2</td><td class="">2422</td><td class="">5399</td><td class="">776</td><td class="">4151</td></tr><tr><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_top handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; height: 30px; transform: translate3d(0px, 0px, 0px);"><div class="wtHolder" style="position: relative; height: 47px;"><div class="wtHider" style="width: 349px;"><div class="wtSpreader" style="position: relative; left: 0px;"><table class="htCore"><colgroup><col style="width: 50px;"><col style="width: 50px;"><col style="width: 52px;"><col style="width: 72px;"><col style="width: 50px;"><col style="width: 75px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader">A</span></div></th><th class="" style="border-left-width: 0px;"><div class="relative"><span class="colHeader">B</span></div></th><th class=""><div class="relative"><span class="colHeader">C</span></div></th><th class=""><div class="relative"><span class="colHeader">D</span></div></th><th class=""><div class="relative"><span class="colHeader">E</span></div></th><th class=""><div class="relative"><span class="colHeader">F</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_bottom handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup></colgroup><thead><tr></tr></thead><tbody></tbody></table></div></div></div></div><div class="ht_clone_left handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup></colgroup><thead><tr></tr></thead><tbody></tbody></table></div></div></div></div></div>
+      <div id="example1_events"><div>0 @0.026 [afterCreateRow] 5, 1, "auto",</div><div>1 @0.142 [afterChange] null, "loadData",</div></div>
+    </div>
+    <div class="clear-log">
+      <button onclick="$(&#39;#example1_events&#39;).empty()" class="intext-btn">Clear log</button>
+    </div>
+    <p><strong>Choose events to be logged:</strong></p>
+    <ul class="tight clearfix" id="hooksList">
+      <li><label><input type="checkbox" id="check_select_all"><strong>select all</strong></label></li>
+    <li><label><input type="checkbox" id="check_afterCellMetaReset"> afterCellMetaReset</label></li><li><label><input type="checkbox" checked="" id="check_afterChange"> afterChange</label></li><li><label><input type="checkbox" id="check_afterChangesObserved"> afterChangesObserved</label></li><li><label><input type="checkbox" id="check_afterContextMenuDefaultOptions"> afterContextMenuDefaultOptions</label></li><li><label><input type="checkbox" id="check_beforeContextMenuSetItems"> beforeContextMenuSetItems</label></li><li><label><input type="checkbox" id="check_afterDropdownMenuDefaultOptions"> afterDropdownMenuDefaultOptions</label></li><li><label><input type="checkbox" id="check_beforeDropdownMenuSetItems"> beforeDropdownMenuSetItems</label></li><li><label><input type="checkbox" id="check_afterContextMenuHide"> afterContextMenuHide</label></li><li><label><input type="checkbox" id="check_beforeContextMenuShow"> beforeContextMenuShow</label></li><li><label><input type="checkbox" id="check_afterContextMenuShow"> afterContextMenuShow</label></li><li><label><input type="checkbox" id="check_afterCopyLimit"> afterCopyLimit</label></li><li><label><input type="checkbox" id="check_beforeCreateCol"> beforeCreateCol</label></li><li><label><input type="checkbox" checked="" id="check_afterCreateCol"> afterCreateCol</label></li><li><label><input type="checkbox" id="check_beforeCreateRow"> beforeCreateRow</label></li><li><label><input type="checkbox" checked="" id="check_afterCreateRow"> afterCreateRow</label></li><li><label><input type="checkbox" id="check_afterDeselect"> afterDeselect</label></li><li><label><input type="checkbox" id="check_afterDestroy"> afterDestroy</label></li><li><label><input type="checkbox" id="check_afterDocumentKeyDown"> afterDocumentKeyDown</label></li><li><label><input type="checkbox" id="check_afterDrawSelection"> afterDrawSelection</label></li><li><label><input type="checkbox" id="check_beforeRemoveCellClassNames"> beforeRemoveCellClassNames</label></li><li><label><input type="checkbox" id="check_afterGetCellMeta"> afterGetCellMeta</label></li><li><label><input type="checkbox" id="check_afterGetColHeader"> afterGetColHeader</label></li><li><label><input type="checkbox" id="check_afterGetRowHeader"> afterGetRowHeader</label></li><li><label><input type="checkbox" id="check_afterInit"> afterInit</label></li><li><label><input type="checkbox" id="check_afterLoadData"> afterLoadData</label></li><li><label><input type="checkbox" id="check_afterMomentumScroll"> afterMomentumScroll</label></li><li><label><input type="checkbox" id="check_afterOnCellCornerMouseDown"> afterOnCellCornerMouseDown</label></li><li><label><input type="checkbox" id="check_afterOnCellCornerDblClick"> afterOnCellCornerDblClick</label></li><li><label><input type="checkbox" id="check_afterOnCellMouseDown"> afterOnCellMouseDown</label></li><li><label><input type="checkbox" id="check_afterOnCellMouseUp"> afterOnCellMouseUp</label></li><li><label><input type="checkbox" id="check_afterOnCellContextMenu"> afterOnCellContextMenu</label></li><li><label><input type="checkbox" id="check_afterOnCellMouseOver"> afterOnCellMouseOver</label></li><li><label><input type="checkbox" id="check_afterOnCellMouseOut"> afterOnCellMouseOut</label></li><li><label><input type="checkbox" checked="" id="check_afterRemoveCol"> afterRemoveCol</label></li><li><label><input type="checkbox" checked="" id="check_afterRemoveRow"> afterRemoveRow</label></li><li><label><input type="checkbox" id="check_afterRender"> afterRender</label></li><li><label><input type="checkbox" id="check_beforeRenderer"> beforeRenderer</label></li><li><label><input type="checkbox" id="check_afterRenderer"> afterRenderer</label></li><li><label><input type="checkbox" id="check_afterScrollHorizontally"> afterScrollHorizontally</label></li><li><label><input type="checkbox" id="check_afterScrollVertically"> afterScrollVertically</label></li><li><label><input type="checkbox" checked="" id="check_afterSelection"> afterSelection</label></li><li><label><input type="checkbox" id="check_afterSelectionByProp"> afterSelectionByProp</label></li><li><label><input type="checkbox" id="check_afterSelectionEnd"> afterSelectionEnd</label></li><li><label><input type="checkbox" id="check_afterSelectionEndByProp"> afterSelectionEndByProp</label></li><li><label><input type="checkbox" id="check_afterSetCellMeta"> afterSetCellMeta</label></li><li><label><input type="checkbox" id="check_afterRemoveCellMeta"> afterRemoveCellMeta</label></li><li><label><input type="checkbox" id="check_afterSetDataAtCell"> afterSetDataAtCell</label></li><li><label><input type="checkbox" id="check_afterSetDataAtRowProp"> afterSetDataAtRowProp</label></li><li><label><input type="checkbox" id="check_afterUpdateSettings"> afterUpdateSettings</label></li><li><label><input type="checkbox" id="check_afterValidate"> afterValidate</label></li><li><label><input type="checkbox" id="check_beforeLanguageChange"> beforeLanguageChange</label></li><li><label><input type="checkbox" id="check_afterLanguageChange"> afterLanguageChange</label></li><li><label><input type="checkbox" id="check_beforeAutofill"> beforeAutofill</label></li><li><label><input type="checkbox" id="check_beforeCellAlignment"> beforeCellAlignment</label></li><li><label><input type="checkbox" id="check_beforeChange"> beforeChange</label></li><li><label><input type="checkbox" id="check_beforeChangeRender"> beforeChangeRender</label></li><li><label><input type="checkbox" id="check_beforeDrawBorders"> beforeDrawBorders</label></li><li><label><input type="checkbox" id="check_beforeGetCellMeta"> beforeGetCellMeta</label></li><li><label><input type="checkbox" id="check_beforeRemoveCellMeta"> beforeRemoveCellMeta</label></li><li><label><input type="checkbox" id="check_beforeInit"> beforeInit</label></li><li><label><input type="checkbox" id="check_beforeInitWalkontable"> beforeInitWalkontable</label></li><li><label><input type="checkbox" id="check_beforeKeyDown"> beforeKeyDown</label></li><li><label><input type="checkbox" id="check_beforeOnCellMouseDown"> beforeOnCellMouseDown</label></li><li><label><input type="checkbox" id="check_beforeOnCellMouseUp"> beforeOnCellMouseUp</label></li><li><label><input type="checkbox" id="check_beforeOnCellContextMenu"> beforeOnCellContextMenu</label></li><li><label><input type="checkbox" id="check_beforeOnCellMouseOver"> beforeOnCellMouseOver</label></li><li><label><input type="checkbox" id="check_beforeOnCellMouseOut"> beforeOnCellMouseOut</label></li><li><label><input type="checkbox" id="check_beforeRemoveCol"> beforeRemoveCol</label></li><li><label><input type="checkbox" id="check_beforeRemoveRow"> beforeRemoveRow</label></li><li><label><input type="checkbox" id="check_beforeRender"> beforeRender</label></li><li><label><input type="checkbox" id="check_beforeSetRangeStartOnly"> beforeSetRangeStartOnly</label></li><li><label><input type="checkbox" id="check_beforeSetRangeStart"> beforeSetRangeStart</label></li><li><label><input type="checkbox" id="check_beforeSetRangeEnd"> beforeSetRangeEnd</label></li><li><label><input type="checkbox" id="check_beforeTouchScroll"> beforeTouchScroll</label></li><li><label><input type="checkbox" id="check_beforeValidate"> beforeValidate</label></li><li><label><input type="checkbox" id="check_beforeValueRender"> beforeValueRender</label></li><li><label><input type="checkbox" id="check_construct"> construct</label></li><li><label><input type="checkbox" id="check_init"> init</label></li><li><label><input type="checkbox" id="check_modifyCol"> modifyCol</label></li><li><label><input type="checkbox" id="check_unmodifyCol"> unmodifyCol</label></li><li><label><input type="checkbox" id="check_unmodifyRow"> unmodifyRow</label></li><li><label><input type="checkbox" id="check_modifyColHeader"> modifyColHeader</label></li><li><label><input type="checkbox" id="check_modifyColWidth"> modifyColWidth</label></li><li><label><input type="checkbox" id="check_modifyRow"> modifyRow</label></li><li><label><input type="checkbox" id="check_modifyRowHeader"> modifyRowHeader</label></li><li><label><input type="checkbox" id="check_modifyRowHeight"> modifyRowHeight</label></li><li><label><input type="checkbox" id="check_modifyData"> modifyData</label></li><li><label><input type="checkbox" id="check_modifyRowData"> modifyRowData</label></li><li><label><input type="checkbox" id="check_modifyGetCellCoords"> modifyGetCellCoords</label></li><li><label><input type="checkbox" id="check_persistentStateLoad"> persistentStateLoad</label></li><li><label><input type="checkbox" id="check_persistentStateReset"> persistentStateReset</label></li><li><label><input type="checkbox" id="check_persistentStateSave"> persistentStateSave</label></li><li><label><input type="checkbox" id="check_beforeColumnSort"> beforeColumnSort</label></li><li><label><input type="checkbox" id="check_afterColumnSort"> afterColumnSort</label></li><li><label><input type="checkbox" id="check_modifyAutofillRange"> modifyAutofillRange</label></li><li><label><input type="checkbox" id="check_modifyCopyableRange"> modifyCopyableRange</label></li><li><label><input type="checkbox" id="check_beforeCut"> beforeCut</label></li><li><label><input type="checkbox" id="check_afterCut"> afterCut</label></li><li><label><input type="checkbox" id="check_beforeCopy"> beforeCopy</label></li><li><label><input type="checkbox" id="check_afterCopy"> afterCopy</label></li><li><label><input type="checkbox" id="check_beforePaste"> beforePaste</label></li><li><label><input type="checkbox" id="check_afterPaste"> afterPaste</label></li><li><label><input type="checkbox" id="check_beforeColumnMove"> beforeColumnMove</label></li><li><label><input type="checkbox" id="check_afterColumnMove"> afterColumnMove</label></li><li><label><input type="checkbox" id="check_beforeRowMove"> beforeRowMove</label></li><li><label><input type="checkbox" id="check_afterRowMove"> afterRowMove</label></li><li><label><input type="checkbox" id="check_beforeColumnResize"> beforeColumnResize</label></li><li><label><input type="checkbox" id="check_afterColumnResize"> afterColumnResize</label></li><li><label><input type="checkbox" id="check_beforeRowResize"> beforeRowResize</label></li><li><label><input type="checkbox" id="check_afterRowResize"> afterRowResize</label></li><li><label><input type="checkbox" id="check_afterGetColumnHeaderRenderers"> afterGetColumnHeaderRenderers</label></li><li><label><input type="checkbox" id="check_afterGetRowHeaderRenderers"> afterGetRowHeaderRenderers</label></li><li><label><input type="checkbox" id="check_beforeStretchingColumnWidth"> beforeStretchingColumnWidth</label></li><li><label><input type="checkbox" id="check_beforeFilter"> beforeFilter</label></li><li><label><input type="checkbox" id="check_afterFilter"> afterFilter</label></li><li><label><input type="checkbox" id="check_modifyColumnHeaderHeight"> modifyColumnHeaderHeight</label></li><li><label><input type="checkbox" id="check_beforeUndo"> beforeUndo</label></li><li><label><input type="checkbox" id="check_afterUndo"> afterUndo</label></li><li><label><input type="checkbox" id="check_beforeRedo"> beforeRedo</label></li><li><label><input type="checkbox" id="check_afterRedo"> afterRedo</label></li><li><label><input type="checkbox" id="check_modifyRowHeaderWidth"> modifyRowHeaderWidth</label></li><li><label><input type="checkbox" id="check_beforeAutofillInsidePopulate"> beforeAutofillInsidePopulate</label></li><li><label><input type="checkbox" id="check_modifyTransformStart"> modifyTransformStart</label></li><li><label><input type="checkbox" id="check_modifyTransformEnd"> modifyTransformEnd</label></li><li><label><input type="checkbox" id="check_afterModifyTransformStart"> afterModifyTransformStart</label></li><li><label><input type="checkbox" id="check_afterModifyTransformEnd"> afterModifyTransformEnd</label></li><li><label><input type="checkbox" id="check_afterViewportRowCalculatorOverride"> afterViewportRowCalculatorOverride</label></li><li><label><input type="checkbox" id="check_afterViewportColumnCalculatorOverride"> afterViewportColumnCalculatorOverride</label></li><li><label><input type="checkbox" id="check_afterPluginsInitialized"> afterPluginsInitialized</label></li><li><label><input type="checkbox" id="check_skipLengthCache"> skipLengthCache</label></li><li><label><input type="checkbox" id="check_afterTrimRow"> afterTrimRow</label></li><li><label><input type="checkbox" id="check_afterUntrimRow"> afterUntrimRow</label></li><li><label><input type="checkbox" id="check_beforeDropdownMenuShow"> beforeDropdownMenuShow</label></li><li><label><input type="checkbox" id="check_afterDropdownMenuShow"> afterDropdownMenuShow</label></li><li><label><input type="checkbox" id="check_afterDropdownMenuHide"> afterDropdownMenuHide</label></li><li><label><input type="checkbox" id="check_hiddenRow"> hiddenRow</label></li><li><label><input type="checkbox" id="check_hiddenColumn"> hiddenColumn</label></li><li><label><input type="checkbox" id="check_beforeAddChild"> beforeAddChild</label></li><li><label><input type="checkbox" id="check_afterAddChild"> afterAddChild</label></li><li><label><input type="checkbox" id="check_beforeDetachChild"> beforeDetachChild</label></li><li><label><input type="checkbox" id="check_afterDetachChild"> afterDetachChild</label></li><li><label><input type="checkbox" id="check_afterBeginEditing"> afterBeginEditing</label></li><li><label><input type="checkbox" id="check_beforeMergeCells"> beforeMergeCells</label></li><li><label><input type="checkbox" id="check_afterMergeCells"> afterMergeCells</label></li><li><label><input type="checkbox" id="check_beforeUnmergeCells"> beforeUnmergeCells</label></li><li><label><input type="checkbox" id="check_afterUnmergeCells"> afterUnmergeCells</label></li><li><label><input type="checkbox" id="check_afterListen"> afterListen</label></li><li><label><input type="checkbox" id="check_afterUnlisten"> afterUnlisten</label></li><li><label><input type="checkbox" id="check_afterContextMenuExecute"> afterContextMenuExecute</label></li><li><label><input type="checkbox" id="check_afterDropdownMenuExecute"> afterDropdownMenuExecute</label></li></ul>
+  </div>
+
+  <div class="codeLayout">
+    <div class="buttons">
+      <!--<button class="jsFiddleLink" data-runfiddle="example1">-->
+        <!--<i class="fa fa-jsfiddle"></i>-->
+        <!--Edit-->
+      <!--</button>-->
+      <button class="dump" name="dump" data-dump="#example1" data-instance="hot" title="Print current data source to console">
+        <i class="fa fa-terminal"></i>
+        Dump data to console
+      </button>
+    </div>
+    <script data-jsfiddle="example1">
+      var
+        data = [
+          ['', 'Tesla', 'Mazda', 'Mercedes', 'Mini', 'Mitsubishi'],
+          ['2017', 0, 2941, 4303, 354, 5814],
+          ['2018', 3, 2905, 2867, 412, 5284],
+          ['2019', 4, 2517, 4822, 552, 6127],
+          ['2020', 2, 2422, 5399, 776, 4151]
+        ],
+        example1 = document.getElementById('example1'),
+        config,
+        $hooksList,
+        hooks,
+        hot;
+
+      config = {
+        data: data,
+        minRows: 5,
+        minCols: 6,
+        minSpareRows: 1,
+        autoWrapRow: true,
+        colHeaders: true,
+        contextMenu: true
+      };
+
+      $hooksList = $('#hooksList');
+      hooks = Handsontable.hooks.getRegistered();
+
+      hooks.forEach(function(hook) {
+        var checked = '';
+
+        if (hook === 'afterChange' || hook === 'afterSelection' || hook === 'afterCreateRow' || hook === 'afterRemoveRow' ||
+            hook === 'afterCreateCol' || hook === 'afterRemoveCol') {
+          checked = 'checked';
+        }
+        $hooksList.append('<li><label><input type="checkbox" ' + checked + ' id="check_' + hook + '"> ' + hook + '</label></li>');
+        config[hook] = function() {
+          log_events(hook, arguments);
+        }
+      });
+
+      var start = (new Date()).getTime();
+      var i = 0;
+      var timer;
+      var example1_events = document.getElementById("example1_events");
+
+      function log_events(event, data) {
+        if (document.getElementById('check_' + event).checked) {
+          var now = (new Date()).getTime(),
+            diff = now - start,
+            vals, str, div, text;
+
+          vals = [
+            i,
+              "@" + numbro(diff / 1000).format('0.000'),
+              "[" + event + "]"
+          ];
+
+          for (var d = 0; d < data.length; d++) {
+            try {
+              str = JSON.stringify(data[d]);
+            }
+            catch (e) {
+              str = data[d].toString(); // JSON.stringify breaks on circular reference to a HTML node
+            }
+
+            if (str === void 0) {
+              continue;
+            }
+
+            if (str.length > 20) {
+              str = Object.prototype.toString.call(data[d]);
+            }
+            if (d < data.length - 1) {
+              str += ',';
+            }
+            vals.push(str);
+          }
+
+          if (window.console) {
+            console.log(i,
+                "@" + numbro(diff / 1000).format('0.000'),
+                "[" + event + "]",
+              data);
+          }
+          div = document.createElement("DIV");
+          text = document.createTextNode(vals.join(" "));
+
+          div.appendChild(text);
+          example1_events.appendChild(div);
+          clearTimeout(timer);
+          timer = setTimeout(function() {
+            example1_events.scrollTop = example1_events.scrollHeight;
+          }, 10);
+
+          i++;
+        }
+      }
+
+      example1 = document.getElementById('example1');
+      hot = new Handsontable(example1,config);
+
+      $('#check_select_all').click(function () {
+        var state = this.checked;
+
+        $('#hooksList input[type=checkbox]').each(function () {
+          if (state === true) {
+            if (this.id === 'check_modifyRow') {
+              return; //too much noise in the log
+            }
+          }
+          this.checked = state;
+        });
+      });
+
+      $('#hooksList input[type=checkbox]').click(function () {
+        if (!this.checked) {
+          document.getElementById('check_select_all').checked = false;
+        }
+      });</script><pre class="javascript"><code class="hljs"><span class="code-line"><span class="hljs-keyword">var</span></span>
+<span class="code-line">  data = [</span>
+<span class="code-line">    [<span class="hljs-string">''</span>, <span class="hljs-string">'Tesla'</span>, <span class="hljs-string">'Mazda'</span>, <span class="hljs-string">'Mercedes'</span>, <span class="hljs-string">'Mini'</span>, <span class="hljs-string">'Mitsubishi'</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'2017'</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2941</span>, <span class="hljs-number">4303</span>, <span class="hljs-number">354</span>, <span class="hljs-number">5814</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'2018'</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2905</span>, <span class="hljs-number">2867</span>, <span class="hljs-number">412</span>, <span class="hljs-number">5284</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'2019'</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2517</span>, <span class="hljs-number">4822</span>, <span class="hljs-number">552</span>, <span class="hljs-number">6127</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'2020'</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2422</span>, <span class="hljs-number">5399</span>, <span class="hljs-number">776</span>, <span class="hljs-number">4151</span>]</span>
+<span class="code-line">  ],</span>
+<span class="code-line">  example1 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'example1'</span>),</span>
+<span class="code-line">  config,</span>
+<span class="code-line">  $hooksList,</span>
+<span class="code-line">  hooks,</span>
+<span class="code-line">  hot;</span>
+<span class="code-line"></span>
+<span class="code-line">config = {</span>
+<span class="code-line">  <span class="hljs-attr">data</span>: data,</span>
+<span class="code-line">  <span class="hljs-attr">minRows</span>: <span class="hljs-number">5</span>,</span>
+<span class="code-line">  <span class="hljs-attr">minCols</span>: <span class="hljs-number">6</span>,</span>
+<span class="code-line">  <span class="hljs-attr">minSpareRows</span>: <span class="hljs-number">1</span>,</span>
+<span class="code-line">  <span class="hljs-attr">autoWrapRow</span>: <span class="hljs-literal">true</span>,</span>
+<span class="code-line">  <span class="hljs-attr">colHeaders</span>: <span class="hljs-literal">true</span>,</span>
+<span class="code-line">  <span class="hljs-attr">contextMenu</span>: <span class="hljs-literal">true</span></span>
+<span class="code-line">};</span>
+<span class="code-line"></span>
+<span class="code-line">$hooksList = $(<span class="hljs-string">'#hooksList'</span>);</span>
+<span class="code-line">hooks = Handsontable.hooks.getRegistered();</span>
+<span class="code-line"></span>
+<span class="code-line">hooks.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">hook</span>) </span>{</span>
+<span class="code-line">  <span class="hljs-keyword">var</span> checked = <span class="hljs-string">''</span>;</span>
+<span class="code-line"></span>
+<span class="code-line">  <span class="hljs-keyword">if</span> (hook === <span class="hljs-string">'afterChange'</span> || hook === <span class="hljs-string">'afterSelection'</span> || hook === <span class="hljs-string">'afterCreateRow'</span> || hook === <span class="hljs-string">'afterRemoveRow'</span> ||</span>
+<span class="code-line">      hook === <span class="hljs-string">'afterCreateCol'</span> || hook === <span class="hljs-string">'afterRemoveCol'</span>) {</span>
+<span class="code-line">    checked = <span class="hljs-string">'checked'</span>;</span>
+<span class="code-line">  }</span>
+<span class="code-line">  $hooksList.append(<span class="hljs-string">'&lt;li&gt;&lt;label&gt;&lt;input type="checkbox" '</span> + checked + <span class="hljs-string">' id="check_'</span> + hook + <span class="hljs-string">'"&gt; '</span> + hook + <span class="hljs-string">'&lt;/label&gt;&lt;/li&gt;'</span>);</span>
+<span class="code-line">  config[hook] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</span>
+<span class="code-line">    log_events(hook, <span class="hljs-built_in">arguments</span>);</span>
+<span class="code-line">  }</span>
+<span class="code-line">});</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="hljs-keyword">var</span> start = (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getTime();</span>
+<span class="code-line"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;</span>
+<span class="code-line"><span class="hljs-keyword">var</span> timer;</span>
+<span class="code-line"><span class="hljs-keyword">var</span> example1_events = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"example1_events"</span>);</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">log_events</span>(<span class="hljs-params">event, data</span>) </span>{</span>
+<span class="code-line">  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'check_'</span> + event).checked) {</span>
+<span class="code-line">    <span class="hljs-keyword">var</span> now = (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getTime(),</span>
+<span class="code-line">      diff = now - start,</span>
+<span class="code-line">      vals, str, div, text;</span>
+<span class="code-line"></span>
+<span class="code-line">    vals = [</span>
+<span class="code-line">      i,</span>
+<span class="code-line">        <span class="hljs-string">"@"</span> + numbro(diff / <span class="hljs-number">1000</span>).format(<span class="hljs-string">'0.000'</span>),</span>
+<span class="code-line">        <span class="hljs-string">"["</span> + event + <span class="hljs-string">"]"</span></span>
+<span class="code-line">    ];</span>
+<span class="code-line"></span>
+<span class="code-line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> d = <span class="hljs-number">0</span>; d &lt; data.length; d++) {</span>
+<span class="code-line">      <span class="hljs-keyword">try</span> {</span>
+<span class="code-line">        str = <span class="hljs-built_in">JSON</span>.stringify(data[d]);</span>
+<span class="code-line">      }</span>
+<span class="code-line">      <span class="hljs-keyword">catch</span> (e) {</span>
+<span class="code-line">        str = data[d].toString(); <span class="hljs-comment">// JSON.stringify breaks on circular reference to a HTML node</span></span>
+<span class="code-line">      }</span>
+<span class="code-line"></span>
+<span class="code-line">      <span class="hljs-keyword">if</span> (str === <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>) {</span>
+<span class="code-line">        <span class="hljs-keyword">continue</span>;</span>
+<span class="code-line">      }</span>
+<span class="code-line"></span>
+<span class="code-line">      <span class="hljs-keyword">if</span> (str.length &gt; <span class="hljs-number">20</span>) {</span>
+<span class="code-line">        str = <span class="hljs-built_in">Object</span>.prototype.toString.call(data[d]);</span>
+<span class="code-line">      }</span>
+<span class="code-line">      <span class="hljs-keyword">if</span> (d &lt; data.length - <span class="hljs-number">1</span>) {</span>
+<span class="code-line">        str += <span class="hljs-string">','</span>;</span>
+<span class="code-line">      }</span>
+<span class="code-line">      vals.push(str);</span>
+<span class="code-line">    }</span>
+<span class="code-line"></span>
+<span class="code-line">    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.console) {</span>
+<span class="code-line">      <span class="hljs-built_in">console</span>.log(i,</span>
+<span class="code-line">          <span class="hljs-string">"@"</span> + numbro(diff / <span class="hljs-number">1000</span>).format(<span class="hljs-string">'0.000'</span>),</span>
+<span class="code-line">          <span class="hljs-string">"["</span> + event + <span class="hljs-string">"]"</span>,</span>
+<span class="code-line">        data);</span>
+<span class="code-line">    }</span>
+<span class="code-line">    div = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"DIV"</span>);</span>
+<span class="code-line">    text = <span class="hljs-built_in">document</span>.createTextNode(vals.join(<span class="hljs-string">" "</span>));</span>
+<span class="code-line"></span>
+<span class="code-line">    div.appendChild(text);</span>
+<span class="code-line">    example1_events.appendChild(div);</span>
+<span class="code-line">    clearTimeout(timer);</span>
+<span class="code-line">    timer = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</span>
+<span class="code-line">      example1_events.scrollTop = example1_events.scrollHeight;</span>
+<span class="code-line">    }, <span class="hljs-number">10</span>);</span>
+<span class="code-line"></span>
+<span class="code-line">    i++;</span>
+<span class="code-line">  }</span>
+<span class="code-line">}</span>
+<span class="code-line"></span>
+<span class="code-line">example1 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'example1'</span>);</span>
+<span class="code-line">hot = <span class="hljs-keyword">new</span> Handsontable(example1,config);</span>
+<span class="code-line"></span>
+<span class="code-line">$(<span class="hljs-string">'#check_select_all'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{</span>
+<span class="code-line">  <span class="hljs-keyword">var</span> state = <span class="hljs-keyword">this</span>.checked;</span>
+<span class="code-line"></span>
+<span class="code-line">  $(<span class="hljs-string">'#hooksList input[type=checkbox]'</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{</span>
+<span class="code-line">    <span class="hljs-keyword">if</span> (state === <span class="hljs-literal">true</span>) {</span>
+<span class="code-line">      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.id === <span class="hljs-string">'check_modifyRow'</span>) {</span>
+<span class="code-line">        <span class="hljs-keyword">return</span>; <span class="hljs-comment">//too much noise in the log</span></span>
+<span class="code-line">      }</span>
+<span class="code-line">    }</span>
+<span class="code-line">    <span class="hljs-keyword">this</span>.checked = state;</span>
+<span class="code-line">  });</span>
+<span class="code-line">});</span>
+<span class="code-line"></span>
+<span class="code-line">$(<span class="hljs-string">'#hooksList input[type=checkbox]'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{</span>
+<span class="code-line">  <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.checked) {</span>
+<span class="code-line">    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'check_select_all'</span>).checked = <span class="hljs-literal">false</span>;</span>
+<span class="code-line">  }</span>
+<span class="code-line">});</span>
+</code></pre>
+  </div>
+
+  <div class="example-container clearfix head-gap" name="source-definition">
+    <h3 id="page-source-definition">Definition for <code>source</code> argument</h3>
+    <p>It's worth to mention that some of the hooks are triggered from the inside of the Handsontable (Core) and some from the plugins.
+      In some situations it is helpful to know what triggered the callback (if it was done by Handsontable itself, triggered from external code or a user action). That's
+      why in crucial hooks Handsontable delivers <code>source</code> as an argument which informs you about who've triggered the action. Thanks to
+      <code>source</code> you can create additional conditions based on that information.
+    </p>
+    <p>
+      <code>source</code> argument is optional. It takes following values:
+      </p><ul>
+        <li><code>auto</code> - Action triggered by Handsontable and reason for it is releated directly with settings aplied to Handsontable.
+          For instance <code>afterCreateRow</code> will be fired with this when <code>minSpareRows</code> will be greater then 0;</li>
+        <li><code>edit</code> - Action triggered by Handsontable after the data has been changed (for example after an edit or using <code>setData*</code> methods);</li>
+        <li><code>loadData</code> - Action triggered by Handsontable after the <code>loadData</code> or <code>updateSettings({data: myData})</code>(with <code>data</code> property) method has been called;</li>
+        <li><code>populateFromArray</code> - Action triggered by Handsontable after requesting for populating data;</li>
+        <li><code>spliceCol</code> - Action triggered by Handsontable after the column data splicing has been done;</li>
+        <li><code>spliceRow</code> - Action triggered by Handsontable after the row data splicing has been done;</li>
+        <li><code>timeValidate</code> - Action triggered by Handsontable after the time validator has been called (for example after an edit);</li>
+        <li><code>dateValidate</code> - Action triggered by Handsontable after the date validator has been called (for example after an edit);</li>
+        <li><code>validateCells</code> - Action triggered by Handsontable after the validation process has been triggered;</li>
+        <li><code>Autofill.fill</code> - Action triggered by the AutoFill plugin;</li>
+        <li><code>Autofill.fill</code> - Action triggered by the AutoFill plugin;</li>
+        <li><code>ContextMenu.clearColumns</code> - Action triggered by the ContextMenu plugin after the "Clear column" has been clicked;</li>
+        <li><code>ContextMenu.columnLeft</code> - Action triggered by the ContextMenu plugin after the "Insert column on the left" has been clicked;</li>
+        <li><code>ContextMenu.columnRight</code> - Action triggered by the ContextMenu plugin after the "Insert column on the right" has been clicked;</li>
+        <li><code>ContextMenu.removeColumn</code> - Action triggered by the ContextMenu plugin after the "Remove column" has been clicked;</li>
+        <li><code>ContextMenu.removeRow</code> - Action triggered by the ContextMenu plugin after the "Remove Row" has been clicked;</li>
+        <li><code>ContextMenu.rowAbove</code> - Action triggered by the ContextMenu plugin after the "Insert row above" has been clicked;</li>
+        <li><code>ContextMenu.rowBelow</code> - Action triggered by the ContextMenu plugin after the "Insert row below" has been clicked;</li>
+        <li><code>CopyPaste.paste</code> - Action triggered by the CopyPaste plugin after the value has been pasted;</li>
+        <li><code>ObserveChanges.change</code> - Action triggered by the ObserveChanges plugin after the changes has been detected;</li>
+        <li><code>UndoRedo.redo</code> - Action triggered by the UndoRedo plugin after the change has been redone;</li>
+        <li><code>UndoRedo.undo</code> - Action triggered by the UndoRedo plugin after the change has been undone;</li>
+        <li><code>GantChart.loadData</code> - Action triggered by the GantChart plugin after the data has been loaded;</li>
+        <li><code>ColumnSummary.set</code> - Action triggered by the ColumnSummary plugin after the calculation has been done;</li>
+        <li><code>ColumnSummary.reset</code> - Action triggered by the ColumnSummary plugin after the calculation has been reset.</li>
+      </ul>
+    <p></p>
+    <p>
+      List of callback that operates on <code>source</code> parameter:
+      </p><ul>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:afterChange">afterChange</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:afterCreateCol">afterCreateCol</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:afterCreateRow">afterCreateRow&lt;</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:afterSetDataAtCell">afterSetDataAtCell</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:afterSetDataAtRowProp">afterSetDataAtRowProp</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:afterValidate">afterValidate</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:beforeChange">beforeChange</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:beforeChangeRender">beforeChangeRender</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:beforeCreateCol">beforeCreateCol</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:beforeCreateRow">beforeCreateRow</a></li>
+        <li><a href="https://handsontable.com/docs/6.2.2/Hooks.html#event:beforeValidate">beforeValidate</a></li>
+      </ul>
+    <p></p>
+  </div>
+
+  <div class="example-container clearfix head-gap" name="beforeKeyDown">
+    <h3 id="page-beforeKeyDown"><code>beforeKeyDown</code> use case</h3>
+    <p>The following demo uses <code>beforeKeyDown</code> callback to modify some key bindings:</p>
+    <ul>
+      <li>Pressing <kbd>DELETE</kbd> or <kbd>BACKSPACE</kbd> on a cell deletes the cell and shifts all cells beneath it
+        in the column up resulting in the cursor (which doesn't move) having the value previously beneath it,
+        now in the current cell.</li>
+      <li>Pressing <kbd>ENTER</kbd> in a cell (not changing the value) results in pushing all the cells in the column beneath
+        this cell down one row (including current cell) resulting in a blank cell under the cursor (which hasn't moved).</li>
+    </ul>
+    <div data-jsfiddle="example2" class="head-gap">
+      <div id="example2" class="hot handsontable htRowHeaders htColumnHeaders"><div class="ht_master handsontable" style="position: relative; overflow: visible;"><div class="wtHolder" style="position: relative; overflow: visible;"><div class="wtHider" style="width: 266px; height: 142px;"><div class="wtSpreader" style="position: relative; top: 0px; left: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"><col style="width: 65px;"><col style="width: 50px;"><col style="width: 51px;"><col style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th><th class=""><div class="relative"><span class="colHeader">A</span></div></th><th class=""><div class="relative"><span class="colHeader">B</span></div></th><th class=""><div class="relative"><span class="colHeader">C</span></div></th><th class=""><div class="relative"><span class="colHeader">D</span></div></th></tr></thead><tbody><tr><th class=""><div class="relative"><span class="rowHeader">1</span></div></th><td class="">Tesla</td><td class="">2017</td><td class="">black</td><td class="">black</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">2</span></div></th><td class="">Nissan</td><td class="">2018</td><td class="">blue</td><td class="">blue</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">3</span></div></th><td class="">Chrysler</td><td class="">2019</td><td class="">yellow</td><td class="">black</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">4</span></div></th><td class="">Volvo</td><td class="">2020</td><td class="">yellow</td><td class="">gray</td></tr><tr><th class=""><div class="relative"><span class="rowHeader">5</span></div></th><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_top handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; height: 30px; transform: translate3d(0px, 0px, 0px);"><div class="wtHolder" style="position: relative; height: 47px;"><div class="wtHider" style="width: 266px;"><div class="wtSpreader" style="position: relative; left: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"><col style="width: 65px;"><col style="width: 50px;"><col style="width: 51px;"><col style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th><th class=""><div class="relative"><span class="colHeader">A</span></div></th><th class=""><div class="relative"><span class="colHeader">B</span></div></th><th class=""><div class="relative"><span class="colHeader">C</span></div></th><th class=""><div class="relative"><span class="colHeader">D</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_bottom handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup></colgroup><thead><tr></tr></thead><tbody></tbody></table></div></div></div></div><div class="ht_clone_left handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; width: 54px; transform: translate3d(0px, 0px, 0px);"><div class="wtHolder" style="position: relative; width: 71px;"><div class="wtHider" style="height: 142px;"><div class="wtSpreader" style="position: relative; top: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th></tr></thead><tbody><tr><th class=""><div class="relative"><span class="rowHeader">1</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">2</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">3</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">4</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">5</span></div></th></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_top_left_corner handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 0px, 0px); height: 30px; width: 54px;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div></div>
+    </div>
+
+    <div class="codeLayout">
+      <div class="buttons">
+        <!--<button class="jsFiddleLink" data-runfiddle="example2">-->
+          <!--<i class="fa fa-jsfiddle"></i>-->
+          <!--Edit-->
+        <!--</button>-->
+        <button class="dump" name="dump" data-dump="#example2" data-instance="hot2" title="Print current data source to console">
+          <i class="fa fa-terminal"></i>
+          Dump data to console
+        </button>
+      </div>
+      <script data-jsfiddle="example2">
+        var data = [
+            ['Tesla', 2017, 'black', 'black'],
+            ['Nissan', 2018, 'blue', 'blue'],
+            ['Chrysler', 2019, 'yellow', 'black'],
+            ['Volvo', 2020, 'yellow', 'gray']
+          ],
+          container = document.getElementById("example2"),
+          lastChange = null,
+          hot;
+
+        hot = new Handsontable(container, {
+          data: data,
+          colHeaders: true,
+          rowHeaders: true,
+          minSpareRows: 1,
+          beforeChange: function (changes, source) {
+            lastChange = changes;
+          }
+        });
+
+        hot.updateSettings({
+            beforeKeyDown: function (e) {
+              var selection = hot.getSelected();
+
+              // BACKSPACE or DELETE
+              if (e.keyCode === 8 || e.keyCode === 46) {
+                e.stopImmediatePropagation();
+                // remove data at cell, shift up
+                hot.spliceCol(selection[1], selection[0], 1);
+                e.preventDefault();
+              }
+              // ENTER
+              else if (e.keyCode === 13) {
+                // if last change affected a single cell and did not change it's values
+                if (lastChange && lastChange.length === 1 && lastChange[0][2] == lastChange[0][3]) {
+                  e.stopImmediatePropagation();
+                  hot.spliceCol(selection[1], selection[0], 0, ''); // add new cell
+                  hot.selectCell(selection[0], selection[1]); // select new cell
+                }
+              }
+
+              lastChange = null;
+            }
+          }
+        );</script><pre class="javascript"><code class="hljs"><span class="code-line"><span class="hljs-keyword">var</span> data = [</span>
+<span class="code-line">    [<span class="hljs-string">'Tesla'</span>, <span class="hljs-number">2017</span>, <span class="hljs-string">'black'</span>, <span class="hljs-string">'black'</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'Nissan'</span>, <span class="hljs-number">2018</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'blue'</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'Chrysler'</span>, <span class="hljs-number">2019</span>, <span class="hljs-string">'yellow'</span>, <span class="hljs-string">'black'</span>],</span>
+<span class="code-line">    [<span class="hljs-string">'Volvo'</span>, <span class="hljs-number">2020</span>, <span class="hljs-string">'yellow'</span>, <span class="hljs-string">'gray'</span>]</span>
+<span class="code-line">  ],</span>
+<span class="code-line">  container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"example2"</span>),</span>
+<span class="code-line">  lastChange = <span class="hljs-literal">null</span>,</span>
+<span class="code-line">  hot;</span>
+<span class="code-line"></span>
+<span class="code-line">hot = <span class="hljs-keyword">new</span> Handsontable(container, {</span>
+<span class="code-line">  <span class="hljs-attr">data</span>: data,</span>
+<span class="code-line">  <span class="hljs-attr">colHeaders</span>: <span class="hljs-literal">true</span>,</span>
+<span class="code-line">  <span class="hljs-attr">rowHeaders</span>: <span class="hljs-literal">true</span>,</span>
+<span class="code-line">  <span class="hljs-attr">minSpareRows</span>: <span class="hljs-number">1</span>,</span>
+<span class="code-line">  <span class="hljs-attr">beforeChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">changes, source</span>) </span>{</span>
+<span class="code-line">    lastChange = changes;</span>
+<span class="code-line">  }</span>
+<span class="code-line">});</span>
+<span class="code-line"></span>
+<span class="code-line">hot.updateSettings({</span>
+<span class="code-line">    <span class="hljs-attr">beforeKeyDown</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{</span>
+<span class="code-line">      <span class="hljs-keyword">var</span> selection = hot.getSelected();</span>
+<span class="code-line"></span>
+<span class="code-line">      <span class="hljs-comment">// BACKSPACE or DELETE</span></span>
+<span class="code-line">      <span class="hljs-keyword">if</span> (e.keyCode === <span class="hljs-number">8</span> || e.keyCode === <span class="hljs-number">46</span>) {</span>
+<span class="code-line">        e.stopImmediatePropagation();</span>
+<span class="code-line">        <span class="hljs-comment">// remove data at cell, shift up</span></span>
+<span class="code-line">        hot.spliceCol(selection[<span class="hljs-number">1</span>], selection[<span class="hljs-number">0</span>], <span class="hljs-number">1</span>);</span>
+<span class="code-line">        e.preventDefault();</span>
+<span class="code-line">      }</span>
+<span class="code-line">      <span class="hljs-comment">// ENTER</span></span>
+<span class="code-line">      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e.keyCode === <span class="hljs-number">13</span>) {</span>
+<span class="code-line">        <span class="hljs-comment">// if last change affected a single cell and did not change it's values</span></span>
+<span class="code-line">        <span class="hljs-keyword">if</span> (lastChange &amp;&amp; lastChange.length === <span class="hljs-number">1</span> &amp;&amp; lastChange[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] == lastChange[<span class="hljs-number">0</span>][<span class="hljs-number">3</span>]) {</span>
+<span class="code-line">          e.stopImmediatePropagation();</span>
+<span class="code-line">          hot.spliceCol(selection[<span class="hljs-number">1</span>], selection[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-string">''</span>); <span class="hljs-comment">// add new cell</span></span>
+<span class="code-line">          hot.selectCell(selection[<span class="hljs-number">0</span>], selection[<span class="hljs-number">1</span>]); <span class="hljs-comment">// select new cell</span></span>
+<span class="code-line">        }</span>
+<span class="code-line">      }</span>
+<span class="code-line"></span>
+<span class="code-line">      lastChange = <span class="hljs-literal">null</span>;</span>
+<span class="code-line">    }</span>
+<span class="code-line">  }</span>
+<span class="code-line">);</span>
+</code></pre>
+    </div>
+  </div>
+  <p class="gap-top-xsmall">
+    <a href="https://github.com/handsontable/docs/edit/6.2.2/tutorials/using-callbacks.html" class="edit-doc" target="_blank">
+      Help us improve this page
+    </a>
+  </p>
+</div>
+
+  
+  
+  
